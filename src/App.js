@@ -26,7 +26,7 @@ function App() {
           />
 
           <SimpsonComponent
-              itemName={'maggiee'}
+              itemName={'maggie'}
               pic={'https://upload.wikimedia.org/wikipedia/en/9/9d/Maggie_Simpson.png'}
           />
 
