@@ -4,7 +4,4 @@ const urls = {
     users: '/users'
 }
 
-export {
-    baseURL,
-    urls
-}
+export {baseURL, urls}

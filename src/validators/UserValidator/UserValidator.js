@@ -5,6 +5,7 @@ const UserValidator = Joi.object({
     username:Joi.string().required(),
     email:Joi.string().required(),
 })
+
 export {
     UserValidator
 }

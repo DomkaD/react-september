@@ -4,7 +4,6 @@ import {joiResolver} from "@hookform/resolvers/joi";
 import {UserValidator} from "../../validators/UserValidator/UserValidator";
 import {userService} from "../../services";
 
-
 export function UserForm ({setUsers}) {
       const{register, handleSubmit, reset, setValue, formState:{errors, isValid}} = useForm({mode:'all', resolver: joiResolver(UserValidator)});
 
