@@ -1,21 +1,13 @@
-import './App.css';
-
-import {SpaceX} from "./components/SpaceX/SpaceX";
-import {Posts} from "./components/Posts/Posts";
-
-
 
 function App() {
-  return (
-    <div className={"App"}>
-
-      <SpaceX/>
-      {/*<Posts/>*/}
 
 
+    return (
+        <div>
 
-    </div>
-  );
+
+        </div>
+    );
 }
 
 export default App;
