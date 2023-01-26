@@ -1,26 +1,28 @@
-import {useEffect, useState} from "react";
-
-
-import {postService} from "../services/postService";
+import React, {useEffect, useState} from 'react';
+import {useParams} from "react-router-dom";
 import {Post} from "../Post/Post";
-import PostInf from "../PostInf/PostInf";
+import {jsonPlaceHolderService} from "../../services";
 
-export function Posts() {
-        
-    let[posts, SetPosts] = useState([])
-    let[post, SetPost] = useState(null)
 
-    function ShowPosts(obj) {
-        SetPost(obj)
-    }
-    useEffect(() => {
-        postService.getAll().then(({data})=>SetPosts(data))
-    }, [])
-    
+
+
+
+
+const Posts = () => {
+
+    const {id}=useParams()
+
+    const [posts,setPosts]=useState([])
+
+    useEffect(()=>{
+        jsonPlaceHolderService.getPostsById(id).then(({data})=>setPosts([{...data}]))
+    },[id])
+
     return (
         <div>
-            {post&&<PostInf post={post}/>}
-            {posts.map(post=><Post key={post.id} post={post} ShowPosts={ShowPosts}/>)}
+            {posts.map(post=><Post key={post.id} post={post}/>)}
         </div>
     );
-}
+};
+
+export {Posts};
