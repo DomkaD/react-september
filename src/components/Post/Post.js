@@ -1,5 +1,3 @@
-
-
 export function Post({post}) {
 
     const {id, userId, title, body} = post
