@@ -1,12 +1,17 @@
-import './App.css';
-import Compon from "./components/compon";
+
+import {Header} from "./components/Header/Header";
+import {Users} from "./components";
+import {Posts} from "./components/Posts/Posts";
+
 
 function App() {
-  return (
-    <div className="App">
-      <Compon/>
-    </div>
-  );
+    return (
+        <div>
+            <Header/>
+            {/*<Posts/>*/}
+            <Users/>
+        </div>
+    );
 }
 
 export default App;
